@@ -27,33 +27,26 @@ return require('packer').startup(function(use)
   use({'wbthomason/packer.nvim', opt = true})
 
   -- Formatting
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-unimpaired'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-repeat'
+  use 'godlygeek/tabular'
   use 'junegunn/vim-easy-align'
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-unimpaired'
   use 'wellle/targets.vim'
 
-  -- Python formatting
-  use "EgZvor/vim-black"
-  use 'jeetsukumaran/vim-python-indent-black'
-
   -- Themes
-  use 'folke/tokyonight.nvim'
-  use 'marko-cerovac/material.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
 
-  -- git commands
+  -- git
   use 'tpope/vim-fugitive'
-  -- use 'airblade/vim-gitgutter'  -- The standard one I use
-  -- Trying out gitsigns
   use ({
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'},
     config = function() require('plugins.gitsigns') end
   })
 
-  -- bufferline
+   -- bufferline
   use({
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -76,18 +69,6 @@ return require('packer').startup(function(use)
 
   -- vim-sneak
   use 'justinmk/vim-sneak'
-
-  use({'nvim-telescope/telescope-fzf-native.nvim', run ='make'})
-
-  -- Markdown
-  use 'godlygeek/tabular'
-  use 'ellisonleao/glow.nvim'
-
-  -- TOML Files
-  use 'cespare/vim-toml'
-
-  -- kitty config syntax-highlight
-  use "fladson/vim-kitty"
 
   if packer_bootstrap then
     require('packer').sync()

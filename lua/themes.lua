@@ -1,14 +1,3 @@
--- Themes
-
--- TokioNight
--- vim.g.tokyonight_style = 'night'
--- vim.g.tokyonight_italic_comments = false
--- vim.cmd [[colorscheme tokyonight]]
-
--- Material
--- vim.g.material_style = 'oceanic'
--- vim.cmd [[colorscheme material]]
-
 -- Catppuccin
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 require("catppuccin").setup({
@@ -83,7 +72,7 @@ require("catppuccin").setup({
 		},
 		dashboard = true,
 		neogit = false,
-		vim_sneak = false,
+		vim_sneak = true,
 		fern = false,
 		barbar = false,
 		bufferline = true,

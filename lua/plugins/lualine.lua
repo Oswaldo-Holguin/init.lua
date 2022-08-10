@@ -1,6 +1,6 @@
 -- Lualine configuration
 
-local non_language_ft = {'fugitive', 'startify'}
+local non_language_ft = {'fugitive'}
 
 require('lualine').setup {
   options = {

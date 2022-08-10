@@ -1,32 +1,32 @@
--- General keymaps that are not pluggin dependant
--- the file "lua/lsp/utils.lua" contains lsp-specific commands.
-
 local Utils = require('utils')
 
--- local exprnnoremap = Utils.exprnnoremap
+local exprnnoremap = Utils.exprnnoremap
+local nmap = Utils.nmap
+local tnoremap = Utils.tnoremap
+local xmap = Utils.xmap
+local xnoremap = Utils.xnoremap
+local inoremap = Utils.inoremap
 local nnoremap = Utils.nnoremap
 local vnoremap = Utils.vnoremap
--- local xnoremap = Utils.xnoremap
-local inoremap = Utils.inoremap
--- local tnoremap = Utils.tnoremap
--- local nmap = Utils.nmap
--- local xmap = Utils.xmap
 
+-- Leader key
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
-
 
 -- Maps to normal mode
 inoremap("<C-}>", "<Esc>")
 inoremap("<C-'>", "<Esc>")
 
--- Run omnifunc, mostly used for autocomplete
-inoremap("<C-SPACE>", "<C-x><C-o>")
+-- Save with Ctrl + s
+nnoremap("<C-s>", ":w<CR>")
 
 -- Save with leader + w
 nnoremap("<leader>w", ":w<CR>")
 
--- Close buffer
+-- Close buffer with Ctrl + q
+nnoremap("<C-q>", ":q<CR>")
+
+-- Close buffer with leader + q
 nnoremap("<leader>q", ":q<CR>")
 
 -- Switch buffers (needs nvim-bufferline)
@@ -43,14 +43,8 @@ nnoremap("<leader>S", ":%s//g<Left><Left>")
 nnoremap("<leader><C-s>", ":%s//gc<Left><Left><Left>")
 
 vnoremap("<leader>s", ":s//g<Left><Left>")
-vnoremap("<leader><A-s>", ":%s//g<Left><Left>")
-vnoremap("<leader>S", ":%s//gc<Left><Left><Left>")
-
--- Delete buffer
-nnoremap("<A-w>", ":bd<CR>")
-
--- Yank to end of line
-nnoremap("Y", "y$")
+vnoremap("<leader>S", ":%s//g<Left><Left>")
+vnoremap("<leader><C-s>", ":%s//gc<Left><Left><Left>")
 
 -- Copy to system clippboard
 nnoremap("<leader>cp", '"+y')
@@ -60,46 +54,12 @@ vnoremap("<leader>cp", '"+y')
 nnoremap("<leader>cv", '"+p')
 vnoremap("<leader>cv", '"+p')
 
--- Clear highlight search
-nnoremap("<leader>nh", ":nohlsearch<CR>")
-vnoremap("<leader>nh", ":nohlsearch<CR>")
-
--- Local list
-nnoremap("<leader>lo", ":lopen<CR>")
-nnoremap("<leader>lc", ":lclose<CR>")
-nnoremap("<C-n>", ":lnext<CR>")
-nnoremap("<C-p>", ":lprev<CR>")
-
--- Quickfix list
-nnoremap("<leader>co", ":copen<CR>")
-nnoremap("<leader>cc", ":cclose<CR>")
-nnoremap("<C-N>", ":cnext<CR>")
-nnoremap("<C-P>", ":cprev<CR>")
-
--- Open file in default application
-nnoremap("<leader>xo", "<Cmd> !xdg-open %<CR><CR>")
-
 -- Fugitive
 nnoremap("<leader>G", ":G<CR>")
 
--- Show line diagnostics
-nnoremap("<leader>d", '<Cmd>lua vim.diagnostic.open_float(0, {scope = "line"})<CR>')
-
--- Open local diagnostics in local list
-nnoremap("<leader>D", "<Cmd>lua vim.diagnostic.setloclist()<CR>")
-
--- Open all project diagnostics in quickfix list
-nnoremap("<leader><A-d>", "<Cmd>lua vim.diagnostic.setqflist()<CR>")
-
 -- File explorer
 nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
--- nnoremap("<leader>e", "<Cmd>RnvimrToggle<CR>")
---
 
 -- vim-sneak
 nnoremap("f", "<Plug>Sneak_s")
 nnoremap("F", "<Plug>Sneak_S")
-
--- EasyAlign
--- xmap("ga", "<cmd>EasyAlign")
--- nmap("ga", "<cmd>EasyAlign")
