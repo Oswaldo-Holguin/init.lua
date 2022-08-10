@@ -23,6 +23,9 @@ nnoremap("<C-s>", ":w<CR>")
 -- Save with leader + w
 nnoremap("<leader>w", ":w<CR>")
 
+-- Yank to end of line
+nnoremap("Y", "y$")
+
 -- Close buffer with Ctrl + q
 nnoremap("<C-q>", ":q<CR>")
 
@@ -63,3 +66,9 @@ nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
 -- vim-sneak
 nnoremap("f", "<Plug>Sneak_s")
 nnoremap("F", "<Plug>Sneak_S")
+
+-- Telescope
+nnoremap("<leader>ff", "<Cmd>Telescope find_files<CR>")
+nnoremap("<leader>fg", "<Cmd>Telescope live_grep<CR>")
+nnoremap("<leader>fb", "<Cmd>Telescope buffers<CR>")
+nnoremap("<leader>fh", "<Cmd>Telescope help_tags<CR>")

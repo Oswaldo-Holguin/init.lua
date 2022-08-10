@@ -67,8 +67,19 @@ return require('packer').startup(function(use)
     config = function() require('plugins.nvimtree') end,  -- Must add this manually
   })
 
-  -- vim-sneak
+  -- Motions
   use 'justinmk/vim-sneak'
+
+  -- Telescope (use choco install ripgrep fd fzf)
+  use 'nvim-lua/plenary.nvim'
+  use 'BurntSushi/ripgrep'
+  use 'nvim-telescope/telescope-fzf-native.nvim'
+  use 'sharkdp/fd'
+  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
