@@ -39,3 +39,6 @@ vim.g.do_file_type_lua = 1
 
 -- System Clipboard
 vim.cmd [[ set clipboard+=unnamedplus ]]
+
+-- Yank highlight duration
+vim.cmd [[ let g:highlightedyank_highlight_duration = 300 ]]

@@ -1,5 +1,4 @@
 -- Plugin definition and loading
--- local execute = vim.api.nvim_command
 local fn = vim.fn
 local cmd = vim.cmd
 
@@ -80,6 +79,9 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- Yank highlight
+  use 'machakann/vim-highlightedyank'
 
   if packer_bootstrap then
     require('packer').sync()
