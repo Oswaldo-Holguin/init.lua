@@ -28,9 +28,14 @@ return require('packer').startup(function(use)
   -- Formatting
   use 'godlygeek/tabular'
   use 'junegunn/vim-easy-align'
+  use({
+    "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  })
   use 'tpope/vim-commentary'
   use 'tpope/vim-repeat'
-  use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'wellle/targets.vim'
 
@@ -45,7 +50,7 @@ return require('packer').startup(function(use)
     config = function() require('plugins.gitsigns') end
   })
 
-   -- bufferline
+  -- bufferline
   use({
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -63,11 +68,11 @@ return require('packer').startup(function(use)
   use({
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require('plugins.nvimtree') end,  -- Must add this manually
+    config = function() require('plugins.nvimtree') end,
   })
 
   -- Hop
- use {
+  use {
     'phaazon/hop.nvim',
     branch = 'v2',
     config = function()
@@ -75,7 +80,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Telescope (use choco install ripgrep fd fzf)
+  -- Telescope (requires: ripgrep fd fzf)
   use 'nvim-lua/plenary.nvim'
   use 'BurntSushi/ripgrep'
   use 'nvim-telescope/telescope-fzf-native.nvim'
