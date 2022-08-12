@@ -66,8 +66,14 @@ return require('packer').startup(function(use)
     config = function() require('plugins.nvimtree') end,  -- Must add this manually
   })
 
-  -- Motions
-  use 'justinmk/vim-sneak'
+  -- Hop
+ use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+    config = function()
+      require'hop'.setup {}
+    end
+  }
 
   -- Telescope (use choco install ripgrep fd fzf)
   use 'nvim-lua/plenary.nvim'

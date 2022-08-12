@@ -23,9 +23,6 @@ nnoremap("<C-s>", ":w<CR>")
 -- Save with leader + w
 nnoremap("<leader>w", ":w<CR>")
 
--- Yank to end of line
-nnoremap("Y", "y$")
-
 -- Close buffer with Ctrl + q
 nnoremap("<C-q>", ":q<CR>")
 
@@ -49,26 +46,25 @@ vnoremap("<leader>s", ":s//g<Left><Left>")
 vnoremap("<leader>S", ":%s//g<Left><Left>")
 vnoremap("<leader><C-s>", ":%s//gc<Left><Left><Left>")
 
--- Copy to system clippboard
-nnoremap("<leader>cp", '"+y')
-vnoremap("<leader>cp", '"+y')
-
--- Paste from system clippboard
-nnoremap("<leader>cv", '"+p')
-vnoremap("<leader>cv", '"+p')
+-- Yank current line
+nnoremap("Y", "yy")
 
 -- Fugitive
 nnoremap("<leader>G", ":G<CR>")
 
 -- File explorer
-nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
-
--- vim-sneak
-nnoremap("f", "<Plug>Sneak_s")
-nnoremap("F", "<Plug>Sneak_S")
+nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")
 
 -- Telescope
-nnoremap("<leader>ff", "<Cmd>Telescope find_files<CR>")
-nnoremap("<leader>fg", "<Cmd>Telescope live_grep<CR>")
-nnoremap("<leader>fb", "<Cmd>Telescope buffers<CR>")
-nnoremap("<leader>fh", "<Cmd>Telescope help_tags<CR>")
+nnoremap("<leader>tf", "<Cmd>Telescope find_files<CR>")
+nnoremap("<leader>tg", "<Cmd>Telescope live_grep<CR>")
+nnoremap("<leader>tb", "<Cmd>Telescope buffers<CR>")
+nnoremap("<leader>th", "<Cmd>Telescope help_tags<CR>")
+
+-- Hop motions
+nnoremap("f", "<Cmd>HopChar1CurrentLine<CR>")
+nnoremap("F", "<Cmd>HopChar2CurrentLine<CR>")
+vnoremap("<leader>f", "<Cmd>HopChar1CurrentLine<CR>")
+vnoremap("<leader>F", "<Cmd>HopChar2CurrentLine<CR>")
+nnoremap("s", "<Cmd>HopChar2MW<CR>")
+vnoremap("<leader>s", "<Cmd>HopChar2MW<CR>")
