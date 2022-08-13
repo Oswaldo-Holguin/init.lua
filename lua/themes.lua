@@ -7,7 +7,7 @@ require("catppuccin").setup({
 		percentage = 0.15,
 	},
 	transparent_background = true,
-	term_colors = false,
+	term_colors = true,
 	compile = {
 		enabled = false,
 		path = vim.fn.stdpath "cache" .. "/catppuccin",

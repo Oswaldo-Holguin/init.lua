@@ -64,5 +64,3 @@ nnoremap("<leader>fh", "<Cmd>Telescope help_tags<CR>")
 -- Hop motions
 nnoremap("s", "<Cmd>HopChar2MW<CR>")
 vnoremap("s", "<Cmd>HopChar2MW<CR>")
-
--- CamelCaseMotion
