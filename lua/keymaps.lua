@@ -13,13 +13,7 @@ local vnoremap = Utils.vnoremap
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Escape keys
-inoremap("jj", "<Esc>")
-inoremap("jk", "<Esc>")
-inoremap("kk", "<Esc>")
-inoremap("kj", "<Esc>")
-
--- Maps to normal mode
+-- Map escape keys
 inoremap("<C-}>", "<Esc>")
 inoremap("<C-'>", "<Esc>")
 
