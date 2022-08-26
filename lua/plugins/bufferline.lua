@@ -7,6 +7,7 @@ end
 
 require('bufferline').setup({
   options = {
+    text = "Buffers", 
     always_show_bufferline = true,
     numbers = tabname_format,
     show_buffer_icons = true,
@@ -19,11 +20,11 @@ require('bufferline').setup({
         text = 'File Explorer',
         highlight = 'Directory'
     }},
+    custom_areas = {
+      right = function()
+        local result = {{text = "Buffers", fg = "#ffffff"}}
+        return result
+      end,
+    }
   },
-  custom_areas = {
-    right = function()
-      local result = {{text = "Buffers", fg = "#ffffff"}}
-      return result
-    end,
-  }
 })
