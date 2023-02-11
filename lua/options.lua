@@ -10,6 +10,7 @@ vim.wo.number          = true
 vim.wo.relativenumber  = true
 vim.wo.signcolumn      = 'yes'
 vim.wo.cursorline      = true
+vim.wo.wrap            = false
 
 -- Behaviour
 vim.o.hlsearch         = false
