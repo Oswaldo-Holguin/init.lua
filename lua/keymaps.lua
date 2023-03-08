@@ -66,5 +66,5 @@ nnoremap("s", "<Cmd>HopChar2MW<CR>")
 vnoremap("s", "<Cmd>HopChar2MW<CR>")
 
 -- Conserve selection on indent
-nnoremap(">", ">gv")
-nnoremap("<", "<gv")
+vnoremap(">", ">gv")
+vnoremap("<", "<gv")
