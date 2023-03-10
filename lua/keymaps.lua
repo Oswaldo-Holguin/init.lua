@@ -7,6 +7,7 @@ local xmap = Utils.xmap
 local xnoremap = Utils.xnoremap
 local inoremap = Utils.inoremap
 local nnoremap = Utils.nnoremap
+local cnoremap = Utils.cnoremap
 local vnoremap = Utils.vnoremap
 
 -- Leader key
@@ -68,3 +69,8 @@ vnoremap("s", "<Cmd>HopChar2MW<CR>")
 -- Conserve selection on indent
 vnoremap(">", ">gv")
 vnoremap("<", "<gv")
+
+-- Map kj as esc key
+inoremap("kj", "<esc>")
+vnoremap("kj", "<esc>")
+cnoremap("kj", "<C-C>")
