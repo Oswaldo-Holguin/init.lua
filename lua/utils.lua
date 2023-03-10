@@ -26,6 +26,8 @@ function M.xmap(lhs, rhs) M.map('x', lhs, rhs) end
 
 function M.nnoremap(lhs, rhs) M.noremap('n', lhs, rhs) end
 
+function M.cnoremap(lhs, rhs) M.noremap('c', lhs, rhs) end
+
 function M.vnoremap(lhs, rhs) M.noremap('v', lhs, rhs) end
 
 function M.xnoremap(lhs, rhs) M.noremap('x', lhs, rhs) end
