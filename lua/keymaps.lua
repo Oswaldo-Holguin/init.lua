@@ -74,3 +74,9 @@ vnoremap("<", "<gv")
 inoremap("kj", "<esc>")
 vnoremap("kj", "<esc>")
 cnoremap("kj", "<C-C>")
+
+-- Center screen on half page movement
+nnoremap("<C-d>", "<C-d>zz")
+vnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+vnoremap("<C-u>", "<C-u>zz")
