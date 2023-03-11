@@ -63,8 +63,8 @@ nnoremap("<leader>fb", "<Cmd>Telescope buffers<CR>")
 nnoremap("<leader>fh", "<Cmd>Telescope help_tags<CR>")
 
 -- Hop motions
-nnoremap("s", "<Cmd>HopChar2MW<CR>")
-vnoremap("s", "<Cmd>HopChar2MW<CR>")
+nnoremap("<leader>s", "<Cmd>HopChar2MW<CR>")
+vnoremap("<leader>s", "<Cmd>HopChar2MW<CR>")
 
 -- Conserve selection on indent
 vnoremap(">", ">gv")
