@@ -30,9 +30,9 @@ nnoremap("<C-q>", ":q<CR>")
 -- Close buffer with leader + q
 nnoremap("<leader>q", ":q<CR>")
 
--- Switch buffers (needs nvim-bufferline)
-nnoremap("<TAB>", ":BufferLineCycleNext<CR>")
-nnoremap("<S-TAB>", ":BufferLineCyclePrev<CR>")
+-- Switch tabs
+nnoremap("<TAB>", "gt")
+nnoremap("<S-TAB>", "gT")
 
 -- Splits
 nnoremap("<leader>ws", ":split<CR>")
