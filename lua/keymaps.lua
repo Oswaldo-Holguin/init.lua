@@ -21,14 +21,8 @@ inoremap("<C-'>", "<Esc>")
 -- Save with Ctrl + s
 nnoremap("<C-s>", ":w<CR>")
 
--- Save with leader + w
-nnoremap("<leader>w", ":w<CR>")
-
 -- Close buffer with Ctrl + q
 nnoremap("<C-q>", ":q<CR>")
-
--- Close buffer with leader + q
-nnoremap("<leader>q", ":q<CR>")
 
 -- Switch tabs
 nnoremap("<TAB>", "gt")
@@ -60,11 +54,6 @@ vnoremap("<leader>s", "<Cmd>HopChar2MW<CR>")
 -- Conserve selection on indent
 vnoremap(">", ">gv")
 vnoremap("<", "<gv")
-
--- Map kj as esc key
-inoremap("kj", "<esc>")
-vnoremap("kj", "<esc>")
-cnoremap("kj", "<C-C>")
 
 -- Center screen on half page movement
 nnoremap("<C-d>", "<C-d>zz")
