@@ -28,10 +28,6 @@ nnoremap("<C-q>", ":q<CR>")
 nnoremap("<TAB>", "gt")
 nnoremap("<S-TAB>", "gT")
 
--- Splits
-nnoremap("<leader>ws", ":split<CR>")
-nnoremap("<leader>vs", ":vsplit<CR>")
-
 -- Yank current line
 nnoremap("Y", "yy")
 
@@ -69,3 +65,8 @@ vnoremap("<C-b>", "<C-b>zz")
 
 -- Select last pasted text
 nnoremap("gp", "`[v`]")
+
+-- Map kj as esc key
+inoremap("kj", "<esc>")
+vnoremap("kj", "<esc>")
+cnoremap("kj", "<C-C>")
