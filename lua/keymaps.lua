@@ -65,8 +65,3 @@ vnoremap("<C-b>", "<C-b>zz")
 
 -- Select last pasted text
 nnoremap("gp", "`[v`]")
-
--- Map kj as esc key
-inoremap("kj", "<esc>")
-vnoremap("kj", "<esc>")
-cnoremap("kj", "<C-C>")
