@@ -20,6 +20,11 @@ cmd([[
   augroup end
 ]])
 
+local pac = require('packer')
+pac.init({
+    max_jobs = 5,
+})
+
 -- Initialize pluggins
 return require('packer').startup(function(use)
   -- Let Packer manage itself
